@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color:#393939;
+    color: #fff;
+    
+}
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+}
+.text{
+    position: relative;
+    right: 3.5%;
+}
+
+h1 {
+    
+    font-size: 40px;
+    letter-spacing:10px;
+    font-family: "Protest Riot", sans-serif;    
+    width: 24%;
+    
+    color:tomato;
+    cursor:pointer;
+    transition:0.5s ease-in-out;
+  }
+  h1:before,
+  h1:after {
+    content:attr(data-text);
+    transition:.6s;
+  }
+  h1:before {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index:-1;
+    text-shadow:
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px,
+     0px 0px;
+    -webkit-mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+            mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+  }
+  h1:hover {
+    
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px tomato;
+    padding: 20px;
+    border: 3px solid tomato;
+    text-shadow: 10px 10px 60px;
+    transform:translate(-10px,-10px);
+  }  
+  h1:hover:before {
+    text-shadow:
+     1px 1px,
+     2px 2px,
+     3px 3px,
+     4px 4px,
+     5px 5px,
+     6px 6px,
+     7px 7px,
+     8px 8px,
+     9px 9px,
+     10px 10px;
+  }
+#box{
+    margin-right: 10px;
+    padding: 20px;
+    border-radius:50% ;
+    text-align: center; 
+    width: 100px;
+    height: 100px;
+    font-size: 40px;  
+    border: 2px solid tomato ;
+    color:tomato;
+    transition: box-shadow 0.5s ease-in;
+	}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  
+}
+#box:hover{
+    box-shadow: 2px 2px 12px tomato ;
+}
+.text{
+    margin-left: 47%;
+    margin-bottom: 45px;
+}
+.buttons{
+    display: flex;
+}
+#rfrs{
+    margin-left: 15px;
+    
+}
+.bttn{
+    padding: 20px;
+    font-size: 20px;
+    margin-left: 41%;
+    border-radius: 30px;
+    border: 1.5px solid tomato;
+    color: #000;    
+    background: linear-gradient(to right, tomato 50%, rgb(255, 255, 255) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1s ease-in-out;
+    
+}
+
+.bttn:hover{
+    color: #fff;
+    border: 1.5px solid rgb(50, 49, 49);
+    box-shadow: 2px 2px 12px tomato ;
+    background-position: left;
+}
+@media only screen and (max-width: 600px) {
+    .Container {
+        height: 50vh;
+        margin-bottom: 0px;
+    }
+
+
+    #box{
+        height: 40px;
+        width: 40px;
+    }
+    .text {
+        margin-left: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #rfrs {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .bttn {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    h1 {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
